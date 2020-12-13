@@ -1,8 +1,7 @@
 package com.simplon.simplontest;
 
-import com.simplon.simplontest.Services.ProjectService;
-import com.simplon.simplontest.Services.SendEmailService;
-import com.simplon.simplontest.entity.Project;
+import com.simplon.simplontest.services.ProjectService;
+import com.simplon.simplontest.services.SendEmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,13 +10,6 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import org.springframework.scheduling.annotation.Scheduled;
-
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
 
 @SpringBootApplication
 public class SimplontestApplication {
