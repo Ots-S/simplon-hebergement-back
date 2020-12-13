@@ -1,4 +1,4 @@
-package com.simplon.simplontest.Services;
+package com.simplon.simplontest.services;
 
 import com.simplon.simplontest.entity.Project;
 import com.simplon.simplontest.repository.ProjectRepository;
