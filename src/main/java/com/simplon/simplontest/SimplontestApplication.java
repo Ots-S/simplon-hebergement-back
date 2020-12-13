@@ -37,7 +37,7 @@ public class SimplontestApplication {
     public void triggerWhenStarts() {
         String message = sendEmailService.buildMessage(projectService.getProjects());
         if (!message.isEmpty()) {
-            sendEmailService.sendEmail("explodor@gmail.com", message, "Alerte : hébergements bientôt expirés");
+            sendEmailService.sendEmail("tlann@simplonprod.co", message, "Alerte : hébergements bientôt expirés");
         }
     }
 
