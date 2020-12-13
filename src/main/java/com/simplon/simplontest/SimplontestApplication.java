@@ -23,7 +23,7 @@ public class SimplontestApplication {
     @Configuration
     @EnableScheduling
     @ConditionalOnProperty(value = "scheduling.enabled", matchIfMissing = true)
-    class SchedulingConfiguration {
+    static class SchedulingConfiguration {
     }
 
     public static void main(String[] args) {
