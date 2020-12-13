@@ -10,10 +10,8 @@ public class Role {
     private Long id;
     private Long name;
 
-    @OneToMany(mappedBy = "role")
-    private List<Project> projects;
-
-    public Role() {}
+    public Role() {
+    }
 
     public Long getId() {
         return id;
@@ -29,13 +27,5 @@ public class Role {
 
     public void setName(Long name) {
         this.name = name;
-    }
-
-    public List<Project> getProjects() {
-        return projects;
-    }
-
-    public void setProjects(List<Project> projects) {
-        this.projects = projects;
     }
 }

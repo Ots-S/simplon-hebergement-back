@@ -1,5 +1,7 @@
 package com.simplon.simplontest.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -12,14 +14,15 @@ public class Project {
     private String project;
     private String domain;
     private float rate;
+    private boolean OneMonthBeforeExpirationEmailSended = false;
+
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date startingDate;
+    @JsonFormat(pattern = "yyyy-MM-dd")
     private Date endingDate;
 
-    @ManyToOne
-    @JoinColumn(name = "role_id")
-    private Role role;
-
-    public Project() {}
+    public Project() {
+    }
 
     public Long getId() {
         return id;
@@ -77,11 +80,11 @@ public class Project {
         this.endingDate = endingDate;
     }
 
-    public Role getRole() {
-        return role;
+    public boolean isOneMonthBeforeExpirationEmailSended() {
+        return OneMonthBeforeExpirationEmailSended;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setOneMonthBeforeExpirationEmailSended(boolean oneMonthBeforeExpirationEmailSended) {
+        OneMonthBeforeExpirationEmailSended = oneMonthBeforeExpirationEmailSended;
     }
 }
